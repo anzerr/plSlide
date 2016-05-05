@@ -80,6 +80,8 @@
 		$scope.node = false;
 		$scope.architecture = false;
 		$scope.label = false;
+		$scope.names = false;
+		$scope.descs = false;
 
 		$timeout(function() {
 			$scope.loaded = 1;
@@ -97,12 +99,20 @@
 			
 			if (e.keyCode == 39) {
 				$scope.current = Math.max(0, Math.min($scope.current + 1, $scope.page.length - 1));
-				if ($scope.current == 1) {
+				if ($scope.current === 1) {
 					$scope.video.end = false;
 					$scope.video.play();
 					$timeout(function(){
 						$scope.video.end = true;
 					}, 7200);
+				}
+				if ($scope.current === 3) {
+					$timeout(function(){
+						$scope.names = true;
+					}, 1500);
+					$timeout(function(){
+						$scope.descs = true;
+					}, 3500);
 				}
 			}
 		}

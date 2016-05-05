@@ -114,6 +114,10 @@ canvas {
     font-weight: 700;
 }
 
+.transitionALL {
+	transition: all 1s;
+}
+
 .sideFade {
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 77%, rgba(255,255,255,0.57) 88%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 77%,rgba(255,255,255,0.57) 88%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
