@@ -88,7 +88,13 @@
 			
 			if (e.keyCode == 39) {
 				$scope.current = Math.max(0, Math.min($scope.current + 1, $scope.page.length - 1));
-				$scope.video.play();
+				if ($scope.current == 1) {
+					$scope.video.end = false;
+					$scope.video.play();
+					$timeout(function(){
+						$scope.video.end = true;
+					}, 7200);
+				}
 			}
 		}
 		
