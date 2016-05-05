@@ -1,0 +1,91 @@
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	color: #636363;
+    font-family: Open Sans,helvetica,arial,sans-serif;
+}
+
+.page {
+	height: 100%;
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+.vCenter {
+	position:absolute;
+	top:20%;
+	left:0px;
+	width: 100%;
+}
+
+.centerChar {
+	height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slide {
+	height: 100%;
+	position: absolute;
+	top:0px;
+	left:0px;
+	-webkit-transition: all 1s;
+    transition: all 1s;
+	opacity: 0;
+}
+
+canvas {
+	height: 100%;
+	width: 100%;	
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.bottom-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+company-logo {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+.logo {
+	color: #fff;
+    height: auto;
+    font-size: 14px;
+    background: #1ab394;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.sideFade {
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 77%, rgba(255,255,255,0.57) 88%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 77%,rgba(255,255,255,0.57) 88%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 77%,rgba(255,255,255,0.57) 88%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1affffff',GradientType=0 ); /* IE6-9 */
+}
+
+.sub-logo-lines {
+	height: 2px;
+	width: 100%;
+	background: #1ab394; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #1ab394 , white); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #1ab394, white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #1ab394, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #1ab394 , white); /* Standard syntax */
+}
