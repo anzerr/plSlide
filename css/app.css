@@ -1,11 +1,52 @@
+/*
+Explicitly define a Segoe UI font-family so that we can assign Segoe UI 
+Semilight to an appropriate font-weight.
+*/
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Segoe UI Italic");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Segoe UI Bold Italic");
+}
 
 html, body {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
 	width: 100%;
-	color: #636363;
-    font-family: Open Sans,helvetica,arial,sans-serif;
+	color: #333333;
+    font-family: Segoe UI Light,Open Sans,helvetica,arial,sans-serif;
 }
 
 .page {
@@ -55,7 +96,7 @@ canvas {
 	right: 0px;
 }
 
-company-logo {
+.company-logo {
 	width: 100%;
 	height: auto;
 	position: absolute;
@@ -67,7 +108,7 @@ company-logo {
 	color: #fff;
     height: auto;
     font-size: 14px;
-    background: #1ab394;
+    /*background: #0957a0;*/
     padding: 15px 20px;
     border-radius: 5px;
     font-weight: 700;
@@ -83,9 +124,9 @@ company-logo {
 .sub-logo-lines {
 	height: 2px;
 	width: 100%;
-	background: #1ab394; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left, #1ab394 , white); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(right, #1ab394, white); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(right, #1ab394, white); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to right, #1ab394 , white); /* Standard syntax */
+	background: #0957a0; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #0957a0 , white); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #0957a0, white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #0957a0, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #0957a0 , white); /* Standard syntax */
 }

@@ -40,7 +40,7 @@
 				
 				ctx.beginPath();
 				ctx.arc(node[i].x * c.width, node[i].y * c.height, 1, 0, 2 * Math.PI);
-				ctx.fillStyle = '#1ab394';
+				ctx.fillStyle = '#0957a0';
 				ctx.fill();
 			}
 			
@@ -67,7 +67,7 @@
 	
 	app.directive('companyLogo', function() {
 		return {
-			template: '<div class="logo bottom-left"><span> LOGO</span></div>'
+			template: '<div class="logo bottom-left"><img src="resources/images/singularity.png" style="width:200px;margin:0 auto;" /></div>'
 		};
 	});
 
@@ -75,11 +75,11 @@
 		run();
 		$scope.current = 0;
 		$scope.loaded = 0;
+		$scope.video = document.getElementById('video');
 		
 		$timeout(function() {
 			$scope.loaded = 1;
 		}, 1000);
-		
 		
 		$scope.changePage = function(e) {
 			if (e.keyCode == 37) {
@@ -88,6 +88,7 @@
 			
 			if (e.keyCode == 39) {
 				$scope.current = Math.max(0, Math.min($scope.current + 1, $scope.page.length - 1));
+				$scope.video.play();
 			}
 		}
 		
