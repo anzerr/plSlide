@@ -76,11 +76,20 @@
 		$scope.current = 0;
 		$scope.loaded = 0;
 		$scope.video = document.getElementById('video');
-		
+		$scope.framework = false;
+		$scope.node = false;
+		$scope.architecture = false;
+		$scope.label = false;
+
 		$timeout(function() {
 			$scope.loaded = 1;
 		}, 1000);
 		
+		$scope.showRelated = function(related) {
+			$scope.label = true;
+			$scope[related] = true;
+		}
+
 		$scope.changePage = function(e) {
 			if (e.keyCode == 37) {
 				$scope.current = Math.max(0, Math.min($scope.current - 1, $scope.page.length - 1));

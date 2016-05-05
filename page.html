@@ -47,8 +47,36 @@
 					<div class="sub-logo-lines"></div>
 					
 					<div class="vCenter">
-						<div style="font-size:25px;margin:0 auto;width:450px;">
-							text here
+						<div style="margin:0 auto;width:70%;">
+							<div> 
+								<span ng-click="showRelated('node');" 
+										title="basé sur node.js, utilisant JS" 
+										class="keywords"
+										style="cursor: pointer;">Node.js
+								</span>
+								<span ng-click="showRelated('framework');" 
+										title="boite à outils" 
+										class="keywords"
+										style="cursor: pointer;">Framework
+								</span>
+								<span ng-click="showRelated('architecture');" 
+										title="MVC-like, conventions" 
+										class="keywords"
+										style="cursor: pointer;">Architecture
+								</span> 
+							</div>
+							<div style="margin-top: 50px;text-align: center">
+								<label style="font-size:30px" ng-show="label"><b>Contexte</b> : </label>
+								<p class="keywords-desc" ng-show="node">
+									Node.js : Une technologie récente
+								</p>
+								<p class="keywords-desc" ng-show="framework">
+									Framework : Un manque ?
+								</p>
+								<p class="keywords-desc" ng-show="architecture">
+									Architecture : Un besoin de structure, de conventions...
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

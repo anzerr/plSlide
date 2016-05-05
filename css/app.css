@@ -130,3 +130,12 @@ canvas {
 	background: -moz-linear-gradient(right, #0957a0, white); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to right, #0957a0 , white); /* Standard syntax */
 }
+
+.keywords {
+	margin-left: 85px;
+	font-size: 50px;
+}
+
+.keywords-desc {
+	font-size: 30px;
+}
