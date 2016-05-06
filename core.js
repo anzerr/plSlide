@@ -142,10 +142,6 @@
 				color: 'white'
 			}, {
 				color: 'white'
-			}, {
-				color: 'white'
-			}, {
-				color: 'white'
 			}
 		];
 	}]);
