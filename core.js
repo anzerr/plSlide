@@ -67,7 +67,7 @@
 	
 	app.directive('companyLogo', function() {
 		return {
-			template: '<div class="logo bottom-left"><img src="resources/images/singularity.png" style="width:200px;margin:0 auto;" /></div>'
+			template: '<div class="logo bottom-left"><img src="cdn/resources/images/singularity.png" style="width:200px;margin:0 auto;" /></div>'
 		};
 	});
 
@@ -116,6 +116,26 @@
 				}
 			}
 		}
+
+		$scope.obj = {};
+		$scope.objCount = {};
+
+		$scope.up = function(key) {
+			$timeout(function(key) {
+				$scope.obj[key] += 1;
+				$scope.objCount[key] -= 1;
+				if ($scope.objCount[key] > 0) {
+					$scope.up(key);
+				}
+			}, 100);
+		};
+
+		$scope.upgardeValues = function(serverObj) {
+			for (var key in $scope.obj) {
+				$scope.objCount[key] = (serverObj[key] - ($scope.objCount[key] + $scope.obj[key]));
+				$scope.up(key);
+			}
+		};
 		
 		$scope.page = [
 			{

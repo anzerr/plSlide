@@ -2,12 +2,12 @@
 <html lang="en" ng-app="app">
 	<head>
 		<meta charset="utf-8">
-		<title>Report</title>
+		<title>Singularity</title>
 		
-		<link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/app.css">
-		<script src="js/angular.min.js"></script>
-		<script src="core.js"></script>
+		<link rel="stylesheet" href="cdn/css/font-awesome-4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="cdn/css/app.css">
+		<script src="cdn/js/angular.min.js"></script>
+		<script src="cdn/core.js"></script>
 	</head>
 	<body ng-controller="controller" style="width:100%;height:100%;overflow:hidden;position:relative;" ng-keydown="changePage($event)">
 		<canvas id="canvas" style="opacity:{{loaded}};"></canvas>
@@ -15,7 +15,7 @@
 			<div class="page" style="width:{{100 / page.length}}%;">
 				<div style="position: absolute;top:30%;width: 100%;">
 					<div class="logo" style="width:500px;margin:0 auto;">
-						<img src="resources/images/singularity.png" style="width:500px;margin:0 auto;" />
+						<img src="cdn/resources/images/singularity.png" style="width:500px;margin:0 auto;" />
 					</div>
 					
 					<div style="margin:50px 50px;text-align:center;">
@@ -34,7 +34,7 @@
 					<div class="vCenter">
 						<div ng-hide="video.end" style="font-size:25px;margin:0 auto;width:640px;">
 							<video id="video" width="640" height="360">
-								<source src="resources/videos/singularity.mp4" type="video/mp4">	
+								<source src="cdn/resources/videos/singularity.mp4" type="video/mp4">	
 							</video>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 					<div class="vCenter">
 						<div style="margin-top: 250px;font-size:25px;margin:0 auto;width:80%;text-align:center;">
 							<div style="width:33%;float:left;">
-								<img style="border-radius: 45%;" src="resources/images/team/anzer.jpg" alt="ryan" />
+								<img style="border-radius: 45%;" src="cdn/resources/images/team/anzer.jpg" alt="ryan" />
 								<br />
 								<div class="transitionALL" style="{{((names)? 'opacity:1' : 'opacity:0')}};">
 									<h4>Ryan</h4>
@@ -100,7 +100,7 @@
 								</div>
 							</div>
 							<div style="width:33%;float:left;">
-								<img style="border-radius: 45%;" src="resources/images/team/yalap_t.jpg" alt="thomas" />
+								<img style="border-radius: 45%;" src="cdn/resources/images/team/yalap_t.jpg" alt="thomas" />
 								<br />
 								<div class="transitionALL" style="{{((names)? 'opacity:1' : 'opacity:0')}};">
 									<h4>Thomas</h4>
@@ -110,7 +110,7 @@
 								</div>
 							</div>
 							<div style="width:33%;float:left;">
-								<img style="border-radius: 45%;" src="resources/images/team/myself.jpg" alt="teddy" />
+								<img style="border-radius: 45%;" src="cdn/resources/images/team/myself.jpg" alt="teddy" />
 								<br />
 								<div class="transitionALL" style="{{((names)? 'opacity:1' : 'opacity:0')}};">
 									<h4>Teddy</h4>
@@ -149,16 +149,16 @@
 							<div style="text-align: center; width: 42%; float: left;">
 								<h3>Les réseaux sociaux</h3>
 								<div>
-									<img style="width: 120px;" src="resources/images/social/facebook.png" />
-									<img style="width: 120px;" src="resources/images/social/twitter.png" />
-									<img style="width: 120px;" src="resources/images/social/linkedin.png" />
+									<img style="width: 120px;" src="cdn/resources/images/social/facebook.png" />
+									<img style="width: 120px;" src="cdn/resources/images/social/twitter.png" />
+									<img style="width: 120px;" src="cdn/resources/images/social/linkedin.png" />
 								</div>
 							</div>
 							<div style="text-align: center; width: 42%; float: left;">
 								<h3>La communauté développeur</h3>
 								<div>
-									<img style="width: 220px;" src="resources/images/social/npmnodejs.png" />
-									<img style="width: 220px;" src="resources/images/social/github.png" />
+									<img style="width: 220px;" src="cdn/resources/images/social/npmnodejs.png" />
+									<img style="width: 220px;" src="cdn/resources/images/social/github.png" />
 								</div>
 							</div>
 						</div>
@@ -242,7 +242,7 @@
 						<div style="margin-top: 250px;font-size:25px;margin:0 auto;width:80%;text-align:center;height:200px;">
 							<div style="width:50%;float:left;">
 								<div style="height:150px;">
-									<img style="width: 250px;" src="resources/images/technos/nodejs.png" alt="nodejs" />
+									<img style="width: 250px;" src="cdn/resources/images/technos/nodejs.png" alt="nodejs" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;font-weight: bold;color:grey;float:left;">
 									Technologie de base du projet
@@ -250,7 +250,7 @@
 							</div>
 							<div style="width:50%;float:left;">
 								<div style="height:150px;">
-									<img style="width: 150px;" src="resources/images/technos/docker.png" alt="docker" />
+									<img style="width: 150px;" src="cdn/resources/images/technos/docker.png" alt="docker" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;font-weight: bold;color:grey;float:left;">
 									Deploiement
@@ -260,7 +260,7 @@
 						<div style="padding-top: 40px;font-size:25px;margin:0 auto;width:80%;text-align:center;">
 							<div style="width:20%;float:left;">
 								<div style="height:70px;">
-									<img style="width: 120px;" src="resources/images/technos/mongodb.jpeg" alt="mongodb" />
+									<img style="width: 120px;" src="cdn/resources/images/technos/mongodb.jpeg" alt="mongodb" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;color:grey;float:left;">
 									Base de donnée NoSql
@@ -268,7 +268,7 @@
 							</div>
 							<div style="width:20%;float:left;">
 								<div style="height:70px;">
-									<img style="width: 105px; margin-top: 8px;" src="resources/images/technos/nginx.png" alt="nginx" />
+									<img style="width: 105px; margin-top: 8px;" src="cdn/resources/images/technos/nginx.png" alt="nginx" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;color:grey;float:left;">
 									Server HTTP (load balancing, socket, TCP...)
@@ -276,7 +276,7 @@
 							</div>
 							<div style="width:20%;float:left;">
 								<div style="height:70px;">
-									<img style="width: 64px;" src="resources/images/technos/redis.png" alt="redis" />
+									<img style="width: 64px;" src="cdn/resources/images/technos/redis.png" alt="redis" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;color:grey;float:left;">
 									Cache server
@@ -284,7 +284,7 @@
 							</div>
 							<div style="width:20%;float:left;">
 								<div style="height:70px;">
-									<img style="width: 100px;" src="resources/images/technos/mysql.png" alt="mysql" />
+									<img style="width: 100px;" src="cdn/resources/images/technos/mysql.png" alt="mysql" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;color:grey;float:left;">
 									Base de donnée
@@ -292,7 +292,7 @@
 							</div>
 							<div style="width:20%;float:left;">
 								<div style="height:70px;">
-									<img style="width: 120px; magin-top: 15px;" src="resources/images/technos/angular.png" alt="angular" />
+									<img style="width: 120px; magin-top: 15px;" src="cdn/resources/images/technos/angular.png" alt="angular" />
 								</div>
 								<div class="transitionALL" style="{{((descs)? 'opacity:1' : 'opacity:0')}};width: 100%;font-size: 20px;color:grey;float:left;">
 									Framework javascript pour la construction d'applications Web
