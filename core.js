@@ -119,18 +119,64 @@
 		$scope.obj = {};
 		$scope.objCount = {};
 		$scope.objNames = {
-			charDump: {name : 'Char Dump', desc: 'Char Dump test.'},
-			getRequest: {name : 'Get Request', desc: 'Get Request test.'},
-			postCreated: {name : 'Post Created', desc: 'Post Created test.'},
-			postReply: {name : 'Post Reply', desc: 'Post Reply test.'},
-			taskCreated: {name : 'Task Created', desc: 'Task Created test.'},
-			taskFinished: {name : 'Task Finished', desc: 'Task Finished test.'},
+			charDump: {name : 'Nb of characters dumped', desc: 'Char Dump test.', format: function(data){return data;}},
+			getRequest: {name : 'Nb of get requests received', desc: 'Get Request test.', format: function(data){return data;}},
+			postCreated: {name : 'Nb of posts created', desc: 'Post Created test.', format: function(data){return data;}},
+			postReply: {name : 'Nb of replies to a post', desc: 'Post Reply test.', format: function(data){return data;}},
+			taskCreated: {name : 'Nb of tasks created', desc: 'Task Created test.', format: function(data){return data;}},
+			taskFinished: {name : 'Nb of tasks finished', desc: 'Task Finished test.', format: function(data){return data;}},
+			timeInGet: {name : 'Time Past Getting', desc: 'cat.', format: function(data){return (data / 1000) + ' secondes';}},
+			timeInCreate: {name : 'Time Past Creating', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
+			timeInDump: {name : 'Time Past Creating Dumps', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
+			getDateChar: {name : 'Nb of characters sent to the client', desc: 'Task Finished test.', format: function(data){return data;}},
 		};
+
+
+
+		/*$scope.up = function(key) {
+			$timeout(function() {
+				var diff = (($scope.obj[key] - $scope.objCount[key]) + '').length + 1;
+
+				$scope.obj[key] = Math.min($scope.obj[key] + diff, $scope.objCount[key]);
+				$scope.up(key);
+			}, 100);
+		};
+
+		$scope.upgardeValues = function(serverObj) {
+			for (var i in $scope.objCount) {
+				if (!$scope.obj[i]) {
+					$scope.obj[i] = $scope.objCount[i];
+					$scope.up(i);
+				}
+			}
+		};
+
+		$scope.getData = function() {
+			$http({
+				method: 'GET',
+  				url: '/api/stats/'
+			}).then(function successCallback(response) {
+				if (response && response.status && response.status == 200) {
+					if ($scope.firstLoad) {
+						$scope.objCount = response.data;
+						$scope.firstLoad = false;
+					}
+					$scope.objCount = response.data;
+					$scope.upgardeValues(response.data);
+				}
+				$timeout(function() {
+					$scope.getData();
+				}, 1000);
+  			});
+		};*/
+
+
 
 		$scope.up = function(key) {
 			$timeout(function() {
-				$scope.obj[key] += 1;
-				$scope.objCount[key] -= 1;
+				var diff = ($scope.objCount[key] + '').length;
+				$scope.obj[key] += diff;
+				$scope.objCount[key] -= diff;
 				if ($scope.objCount[key] > 0) {
 					$scope.up(key);
 				}

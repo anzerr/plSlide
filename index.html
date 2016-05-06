@@ -309,8 +309,8 @@
 					<div class="sub-logo-lines"></div>
 					
 					<div class="vCenter">
-						<div style="font-size:25px;margin:0 auto;width:450px;">
-							<div ng-repeat="(key, value) in obj">{{objNames[key].name}} : {{value}}</div>
+						<div style="font-size:25px;margin:0 auto;width:600px;">
+							<div ng-repeat="(key, value) in obj">{{(objNames[key].name || key)}} : {{objNames[key].format(value)}}</div>
 						</div>
 					</div>
 				</div>
