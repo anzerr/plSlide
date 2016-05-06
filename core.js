@@ -125,9 +125,9 @@
 			postReply: {name : 'Nb of replies to a post', desc: 'Post Reply test.', format: function(data){return data;}},
 			taskCreated: {name : 'Nb of tasks created', desc: 'Task Created test.', format: function(data){return data;}},
 			taskFinished: {name : 'Nb of tasks finished', desc: 'Task Finished test.', format: function(data){return data;}},
-			timeInGet: {name : 'Time Past Getting', desc: 'cat.', format: function(data){return (data / 1000) + ' secondes';}},
-			timeInCreate: {name : 'Time Past Creating', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
-			timeInDump: {name : 'Time Past Creating Dumps', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
+			timeInGet: {name : 'Time past getting', desc: 'cat.', format: function(data){return (data / 1000) + ' secondes';}},
+			timeInCreate: {name : 'Time past creating', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
+			timeInDump: {name : 'Time past creating dumps', desc: 'Task Finished test.', format: function(data){return (data / 1000) + ' secondes';}},
 			getDateChar: {name : 'Nb of characters sent to the client', desc: 'Task Finished test.', format: function(data){return data;}},
 		};
 
