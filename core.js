@@ -30,8 +30,7 @@
 				life: Math.floor(Math.random() * 800) + 200
 			});
 		}
-		
-		console.log(node);
+
 		var render = function() {
 			for (var i in node) {
 				node[i].x += ((Math.round(Math.random()) == 0) ? 1 : -1) * 0.003;
@@ -71,7 +70,7 @@
 		};
 	});
 
-	app.controller('controller', ['$scope', '$timeout', function($scope, $timeout) {
+	app.controller('controller', ['$scope', '$timeout', '$http', function($scope, $timeout, $http) {
 		run();
 		$scope.current = 0;
 		$scope.loaded = 0;
@@ -119,9 +118,17 @@
 
 		$scope.obj = {};
 		$scope.objCount = {};
+		$scope.objNames = {
+			charDump: {name : 'Char Dump', desc: 'Char Dump test.'},
+			getRequest: {name : 'Get Request', desc: 'Get Request test.'},
+			postCreated: {name : 'Post Created', desc: 'Post Created test.'},
+			postReply: {name : 'Post Reply', desc: 'Post Reply test.'},
+			taskCreated: {name : 'Task Created', desc: 'Task Created test.'},
+			taskFinished: {name : 'Task Finished', desc: 'Task Finished test.'},
+		};
 
 		$scope.up = function(key) {
-			$timeout(function(key) {
+			$timeout(function() {
 				$scope.obj[key] += 1;
 				$scope.objCount[key] -= 1;
 				if ($scope.objCount[key] > 0) {
@@ -132,10 +139,31 @@
 
 		$scope.upgardeValues = function(serverObj) {
 			for (var key in $scope.obj) {
-				$scope.objCount[key] = (serverObj[key] - ($scope.objCount[key] + $scope.obj[key]));
+				$scope.objCount[key] = (serverObj[key] - (($scope.objCount[key] ? $scope.objCount[key] : 0) + $scope.obj[key]));
 				$scope.up(key);
 			}
 		};
+
+		$scope.getData = function() {
+			$http({
+				method: 'GET',
+  				url: '/api/stats/'
+			}).then(function successCallback(response) {
+				if (response && response.status && response.status == 200) {
+					if ($scope.firstLoad) {
+						$scope.obj = response.data;
+						$scope.firstLoad = false;
+					}
+					$scope.upgardeValues(response.data);
+				}
+				$timeout(function() {
+					$scope.getData();
+				}, 1000);
+  			});
+		};
+
+		$scope.firstLoad = true;
+		$scope.getData();
 		
 		$scope.page = [
 			{
